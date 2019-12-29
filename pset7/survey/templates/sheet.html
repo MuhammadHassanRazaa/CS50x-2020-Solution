@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block main %}
+
+<h1>Sheet</h1>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">House</th>
+            <th scope="col">Position</th>
+        </tr>
+    </thead>
+    <tbody {% for r in result %} <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        <td>{{ r[2] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
